@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2 <---Communiti action
+        uses: actions/checkout@v2
       - name: Set up python
         uses: actions/setup-python@v2
         with:
@@ -19,7 +19,7 @@ jobs:
         run: |
             cd function
             python -m pip install --upgrade pip
-            if [ -f requirements.txt ]; then pip install -r requirements.txt -t .; fi  <---check if the requirements.txt file exist or run command
+            if [ -f requirements.txt ]; then pip install -r requirements.txt -t .; fi  
       - name: Create zip bundle
         run: |
             cd function
